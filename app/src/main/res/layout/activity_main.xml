@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/team1Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score +1"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toStartOf="@+id/team2Button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team1Number" />
+
+    <Button
+        android:id="@+id/team2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score +1"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/team1Button"
+        app:layout_constraintTop_toBottomOf="@+id/team2Number" />
+
+    <TextView
+        android:id="@+id/team1Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="52sp"
+        app:layout_constraintBottom_toTopOf="@+id/team1Button"
+        app:layout_constraintEnd_toStartOf="@+id/team2Number"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team1" />
+
+    <TextView
+        android:id="@+id/team2Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="52sp"
+        app:layout_constraintBottom_toTopOf="@+id/team2Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/team1Number"
+        app:layout_constraintTop_toBottomOf="@+id/team2" />
+
+    <EditText
+        android:id="@+id/team1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team 1"
+        android:maxLength="15"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/team1Number"
+        app:layout_constraintEnd_toStartOf="@+id/team2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/team2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team 2"
+        android:maxLength="15"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/team2Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/team1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="275dp"
+        android:layout_height="57dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team1Button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
